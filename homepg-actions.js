@@ -1,6 +1,10 @@
+
+// When the user clicks on <div>, open the popup
 function myFunction() {
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
+}
+
 }
 
 var students= ["Emily", "Carmen", "Elena", "Matilda", "Sasha", "Elise", "Sophia", "Madeline", "Ella"];

@@ -4,6 +4,7 @@
 </head>
 
 <body>
+
 <h1> Senior Assasin </h1>
 
 <h2> Senior Assasin is a game played by seniors at HNA </h2>
@@ -12,9 +13,24 @@
 
 <h2> key tags of HTML </h2>
 
+<div class="popup" onclick="myFunction()">Click me!
+    <span class="popuptext" id="myPopup">Popup text...</span>
+</div>
+
+
 <p> head tag <br>
     Body tag <br>
     h2 tag </p>
+
+<script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+
 
 </body>
 
