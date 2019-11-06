@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{color: maroon}
+        h2{color: grey}
+        var NotEliminated == true;
+    </style>
+<body style="background-color:#DAF7A6;">
+
+<meta charset="UTF-8">
+<title>Player Account</title>
+
+</head>
+
+<body>
+
+<h1> Welcome [insert player ID number here]</h1>
+<div class="popup" onclick="myFunction()"><h2>Click me for your next assignment! </h2>
+    <span class="popuptext" id="myPopup"><h2 style="color: white">Carmen Polzin</h2></span>
+</div>
+
+<script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+</script>
+
+
+
+
+
+<h3> You have eliminated __ players </h3>
+<h4> You are currently still playing</h4>
+
+</body>
+</html>
