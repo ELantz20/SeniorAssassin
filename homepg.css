@@ -91,7 +91,7 @@
 /* Style the navigation bar */
 .navbar {
   width: 100%;
-  background-color: #555;
+  background-color: #000000;
   overflow: auto;
 }
 
@@ -107,12 +107,14 @@
 
 /* Navbar links on mouse-over */
 .navbar a:hover {
-  background-color: #000;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Current/active navbar link */
 .active {
-  background-color: #4CAF50;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
