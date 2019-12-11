@@ -93,15 +93,18 @@
 /* Style the navigation bar */
 .navbar {
   width: 100%;
-  background-color: #000000;
-  overflow: auto;
+  background-color: black;
+  overflow: visable;
+  height: 50px;
+  text-align: center;
 }
 
 /* Navbar links */
 .navbar a {
   float: left;
   text-align: center;
-  padding: 12px;
+  padding: 12px 10px;
+  width: 100px;
   color: white;
   text-decoration: none;
   font-size: 17px;
