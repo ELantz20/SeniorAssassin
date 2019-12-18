@@ -3,7 +3,18 @@ import java.util.ArrayList;
 
 public class Game {
 
-   //private ArrayList masterList = new ArrayList;
+    public static ArrayList<Contact> masterList = new ArrayList<>();
+
+    public void main (String [] args){
+
+        while(masterList.size() != 0 ){
+
+
+
+        }
+
+
+   }
 
 
 
