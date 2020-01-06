@@ -12,7 +12,7 @@ public class Game {
             // "assigning"
             for(int x = 0; x <masterList.size(); x++){
                 masterList.get(x).assign(masterList.get(x+1));
-                
+
             }
 
         }
