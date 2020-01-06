@@ -7,6 +7,7 @@ public class Contact {
     private String name;
     private int ID;
     private boolean lifeStatus;
+    private String assignment;
 
     public Contact(String n, int i){
 
@@ -43,5 +44,11 @@ public class Contact {
     public void setLifeStatus(boolean t){
 
         lifeStatus = t;
+    }
+
+    public String assign(Contact c){
+
+        assignment = c.getName();
+        return c.getName();
     }
 }

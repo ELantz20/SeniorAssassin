@@ -9,7 +9,11 @@ public class Game {
 
         while(masterList.size() != 0 ){
 
-
+            // "assigning"
+            for(int x = 0; x <masterList.size(); x++){
+                masterList.get(x).assign(masterList.get(x+1));
+                
+            }
 
         }
 
