@@ -17,9 +17,9 @@ public class Game {
                 }
             }
 
-            // eliminating
+            // playing the game
 
-            
+
 
         }
 
