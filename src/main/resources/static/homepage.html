@@ -110,6 +110,35 @@
             <span class="popuptext" id="myPopup"><h2 style="color: white">Carmen Polzin</h2></span>
         </div>
 
+
+
+        <button class="open-button" onclick="openForm()">Elimination Submitions </button>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Elimination Submitions</h1>
+
+                <label for="yourName"><b>Your Name</b></label>
+                <input type="text" placeholder="Enter your name" name="yourName" required>
+
+                <label for="personElim"><b>Person Eliminated</b></label>
+                <input type="text" placeholder="Enter person eliminated" name="personElim" required>
+
+                <button type="submit" class="btn">Submit</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        <script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
         <script>
 // When the user clicks on <div>, open the popup
 function myFunction() {
