@@ -25,10 +25,10 @@ public class GreetingController {
     public void CallDatabase() {
 
         // Connect to database
-        String hostName = "your_server.database.windows.net"; // update me
-        String dbName = "SeniorAssasin";
-        String user = "HolyNames";
-        String password = "1234";
+        String hostName = "holynamesacademy.database.windows.net";
+        String dbName = "SeniorAssassin";
+        String user = "hna-admin";
+        String password = "HolyNames123";
         String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;"
                 + "hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
         Connection connection = null;
@@ -46,7 +46,25 @@ public class GreetingController {
                     + "FROM [SalesLT].[ProductCategory] pc "
                     + "JOIN [SalesLT].[Product] p ON pc.productcategoryid = p.productcategoryid";
 
+            String selectSql2 = " SELECT * from Players; ";
+
             try (Statement statement = connection.createStatement();
+                 ResultSet resultSet2 = statement.executeQuery(selectSql2)) {
+
+                // Print results from select statement
+                System.out.println("Top 20 categories:");
+                while (resultSet2.next()) {
+                    System.out.println(resultSet2.getInt(1) + " "
+                            + resultSet2.getString(2));
+                }
+                connection.close();
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+
+
+            /*try (Statement statement = connection.createStatement();
                  ResultSet resultSet = statement.executeQuery(selectSql)) {
 
                 // Print results from select statement
@@ -56,7 +74,7 @@ public class GreetingController {
                             + resultSet.getString(2));
                 }
                 connection.close();
-            }
+            }*/
         } catch (Exception e) {
             e.printStackTrace();
         }
