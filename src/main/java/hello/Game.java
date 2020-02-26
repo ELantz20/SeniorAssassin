@@ -3,42 +3,38 @@ import java.util.ArrayList;
 
 public class Game {
 
-    public static ArrayList<Contact> masterList = new ArrayList<>();
+    public static ArrayList<Contact> masterListIN = new ArrayList<>();
+    public static ArrayList<Contact> masterListOUT = new ArrayList<>();
 
     public void main (String [] args){
 
         // initial assignments
-        for(int x = 0; x <masterList.size(); x++){
-            masterList.get(x).assign(masterList.get(x+1));
-            if(x == masterList.size()-1){
-                masterList.get(x).assign(masterList.get(0));
+        for(int x = 0; x <masterListIN.size(); x++){
+            if(x == masterListIN.size()-1){
+                masterListIN.get(x).assign(masterListIN.get(0));
+                break;
             }
+            masterListIN.get(x).assign(masterListIN.get(x+1));
         }
 
-        while(masterList.size() != 1 ){
+        while(masterListIN.size() != 1 ){
 
             //checking "life status"
-            for(int x = 0; x <masterList.size(); x++){
-                if(masterList.get(x).getLifeStatus() == false){
-                    masterList.get(x).assign(masterList.get(x+1));
-                }
-
-                if(x == masterList.size()-1){
-                    masterList.get(x).assign(masterList.get(0));
+            for(int x = 0; x <masterListIN.size(); x++) {
+                if (masterListIN.get(x).getLifeStatus() == false) {
+                    masterListOUT.add(masterListIN.get(x)) //.assign(masterList.get(x+1));
+                    masterListIN.remove(x);
                 }
             }
 
-            // "assigning"
-            for(int x = 0; x <masterList.size(); x++){
-                masterList.get(x).assign(masterList.get(x+1));
-                if(x == masterList.size()-1){
-                    masterList.get(x).assign(masterList.get(0));
+            //re-assigning
+            for(int x = 0; x <masterListIN.size(); x++){
+                if(x == masterListIN.size()-1){
+                    masterListIN.get(x).assign(masterListIN.get(0));
+                    break;
                 }
+                masterListIN.get(x).assign(masterListIN.get(x+1));
             }
-
-            // playing the game
-
-
 
         }
 
