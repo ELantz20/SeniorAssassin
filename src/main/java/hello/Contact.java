@@ -14,7 +14,7 @@ public class Contact {
         name = n;
         ID = i;
         lifeStatus = true;
-        Game.masterList.add(this);
+        Game.masterListIN.add(this);
     }
 
     public String getName(){

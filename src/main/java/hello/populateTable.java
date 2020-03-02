@@ -19,22 +19,33 @@ import java.sql.*;
 */
 
 
-public class JavaMysqlSelectExample {
+public class populateTable {
 
     public static void main(String[] args) {
         try {
             // create our mysql database connection
-            String myDriver = "org.gjt.mm.mysql.Driver";
-            String myUrl = "jdbc:mysql://localhost/test";
-            Class.forName(myDriver);
-            Connection conn = DriverManager.getConnection(myUrl, "root", "");
+            //String myDriver = "org.gjt.mm.mysql.Driver";
+          //  String myUrl = "jdbc:mysql://localhost/test";
+           // Class.forName(myDriver);
+          //  Connection conn = DriverManager.getConnection(myUrl, "root", "");
+
+            String hostName = "holynamesacademy.database.windows.net";
+            String dbName = "SeniorAssassin";
+            String user = "hna-admin";
+            String password = "HolyNames123";
+            String url = String.format("jdbc:sqlserver://%s:1433;database=%s;user=%s;password=%s;encrypt=true;"
+                    + "hostNameInCertificate=*.database.windows.net;loginTimeout=30;", hostName, dbName, user, password);
+            Connection connection = null;
+
+
+                connection = DriverManager.getConnection(url);
 
             // our SQL SELECT query.
             // if you only need a few columns, specify them by name instead of using "*"
             String query = "SELECT * FROM Players";
 
             // create the java statement
-            Statement st = conn.createStatement();
+            Statement st = connection.createStatement();
 
             // execute the query, and get a java resultset
             ResultSet rs = st.executeQuery(query);
@@ -47,7 +58,7 @@ public class JavaMysqlSelectExample {
                 String Assignment = rs.getString("player_Assignment");
 
                 // print the results
-                System.out.format("%s, %s, %s, %s, %s, %s\n", id, name, lifeStatus, Assignment);
+                System.out.format("%s, %s, %s, %s\n", id, name, lifeStatus, Assignment);
             }
             st.close();
         } catch (Exception e) {
