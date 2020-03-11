@@ -104,7 +104,6 @@
   float: left;
   text-align: center;
   padding: 12px 10px;
-  width: 100px;
   color: white;
   text-decoration: none;
   font-size: 17px;
@@ -114,6 +113,7 @@
 .navbar a:hover {
   background-color: #ffffff;
   color: #000000;
+  height: 50px;
 }
 
 /* Current/active navbar link */
@@ -230,4 +230,8 @@ body, html {
 /* Add some hover effects to buttons */
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
+}
+
+.fa-fw{
+width: fit-content;
 }
