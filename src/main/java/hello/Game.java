@@ -22,7 +22,7 @@ public class Game {
             //checking "life status"
             for(int x = 0; x <masterListIN.size(); x++) {
                 if (masterListIN.get(x).getLifeStatus() == false) {
-                    masterListOUT.add(masterListIN.get(x)); //.assign(masterList.get(x+1));
+                    masterListOUT.add(masterListIN.get(x)) //.assign(masterList.get(x+1));
                     masterListIN.remove(x);
                 }
             }
