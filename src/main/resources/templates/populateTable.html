@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>populate</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-$END$
+<table>
+    <tbody>
+    <tr th:each="Contact: ${Players}">
+        <td th:text="${Contact.id}" />
+        <td th:text="${student.name}" />
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

@@ -2,14 +2,14 @@ package hello;
 
 import java.util.ArrayList;
 
-public class Contact {
+public class Contact{
 
     private String name;
     private int ID;
     private boolean lifeStatus;
     private String assignment;
 
-    public Contact(String n, int i){
+    public Contact(String n, int i) {
 
         name = n;
         ID = i;
@@ -17,38 +17,40 @@ public class Contact {
         Game.masterListIN.add(this);
     }
 
-    public String getName(){
+    public String getName() {
 
         return name;
     }
 
-    public int getID(){
+    public int getID() {
 
         return ID;
     }
 
-    public boolean getLifeStatus(){
+    public boolean getLifeStatus() {
         return lifeStatus;
     }
 
-    public void setName(String n){
+    public void setName(String n) {
 
         name = n;
     }
 
-    public void setID(int i){
+    public void setID(int i) {
 
         ID = i;
     }
 
-    public void setLifeStatus(boolean t){
+    public void setLifeStatus(boolean t) {
 
         lifeStatus = t;
     }
 
-    public String assign(Contact c){
+    public void assign(String c) {
 
-        assignment = c.getName();
-        return c.getName();
+        assignment = c;
+
     }
+
+
 }

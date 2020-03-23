@@ -1,7 +1,8 @@
 
 
-<html>
-<link rel="stylesheet" href="homepg.css" />
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="../static/homepg.css" />
 <head>
     <head>
         <style>
@@ -15,7 +16,8 @@
         }
 
 </style>
-
+    </head>
+</head>
 
 <body style="background-color:#ffffff;">
 <div style="text-align: center;"/>
@@ -32,7 +34,7 @@
 <div id="Home" class="tabcontent">
 
 <font color="Maroon">
-    <br /><img src="img/senior.png"  alt="senior assasin logo" style="width:600px;height:300px;"/>
+    <br /><img src="../static/img/senior.png" alt="senior assasin logo" style="width:600px;height:300px;"/>
 
             <h2> Next rounds starts in:
 
@@ -69,6 +71,28 @@
             }, 1000);
 </script>
 
+                <table>
+                    <tr>
+                        <th>NAME</th>
+                        <th>ID</th>
+                        <th>lifeStatus</th>
+                        <th>assignment</th>
+                    </tr>
+                    <tr th:each="player : ${list}">
+                        <td th:text="${player.name}">Onions</td>
+                        <td th:text="${player.ID}">2.41</td>
+                        <td th:text="${player.lifeStatus}">
+                    <!--    <td th:text="${player.assignment}"></td> -->
+                    </tr>
+                </table>
+
+                <p>
+                    <a href="../home.html" th:href="@{/}">Return to home</a>
+                </p>
+
+
+
+                <!--
                  </h2> </head>
 
 
@@ -79,7 +103,7 @@
 
 
 <font color="blue">
-        <table>
+        <html>
             <table align="center">
             <thead>
 
@@ -108,6 +132,7 @@
 
             </tbody>
         </table>
+            -->
 
         <div class="popup" onclick="myFunction()"><h2>Click me for your next assignment! </h2>
             <span class="popuptext" id="myPopup"><h2 style="color: white">Carmen Polzin</h2></span>
@@ -150,8 +175,6 @@ function myFunction() {
 }
 </script>
 
-</div>
-
 
 <div id="Contact" class="tabcontent">
 
@@ -168,7 +191,6 @@ function myFunction() {
     <p><button>Contact</button></p>
 </div>
 
-</div>
 
 
     <script>
@@ -190,6 +212,3 @@ function openPage(pageName,elmnt,color) {
 document.getElementById("defaultOpen").click();
 </script>
 
-
-
-</html>
