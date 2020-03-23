@@ -5,7 +5,6 @@ public class Game {
 
     public static ArrayList<Contact> masterListIN = new ArrayList<>();
     public static ArrayList<Contact> masterListOUT = new ArrayList<>();
-    public static Contact winner;
 
     public void main (String [] args){
 
@@ -23,7 +22,7 @@ public class Game {
             //checking "life status"
             for(int x = 0; x <masterListIN.size(); x++) {
                 if (masterListIN.get(x).getLifeStatus() == false) {
-                    masterListOUT.add(masterListIN.get(x));
+                    masterListOUT.add(masterListIN.get(x)); //.assign(masterList.get(x+1));
                     masterListIN.remove(x);
                 }
             }
@@ -38,7 +37,6 @@ public class Game {
             }
 
         }
-        winner = masterListIN.get(0);
 
 
    }
