@@ -7,7 +7,7 @@ public class Contact{
     private String name;
     private int ID;
     private boolean lifeStatus;
-    private String assignment;
+    private Contact assignment;
 
     public Contact(String n, int i) {
 
@@ -46,7 +46,7 @@ public class Contact{
         lifeStatus = t;
     }
 
-    public void assign(String c) {
+    public void assign(Contact c) {
 
         assignment = c;
 
