@@ -9,9 +9,10 @@ public class populateTable implements Serializable{
     private Integer id;
     private String name;
 
-    public static ArrayList<Contact> main(String[] args) {
+    public static ArrayList<Contact> main() {
         ArrayList<Contact> Players = new ArrayList<Contact>();
         Contact newPlayer = new Contact("noName", 0);
+        Contact firstAssignment = new Contact("everyoneHasMe", 1);
         try {
             // create our mysql database connection
             //String myDriver = "org.gjt.mm.mysql.Driver";
@@ -48,13 +49,13 @@ public class populateTable implements Serializable{
                 newPlayer.setName(name);
                 boolean lifeStatus = rs.getBoolean("player_lifeStatus");
                 newPlayer.setLifeStatus(lifeStatus);
-                String Assignment = rs.getString("player_Assignment");
-                newPlayer.assign(Assignment);
+                //String Assignment = rs.getString("player_Assignment");
+                newPlayer.assign(firstAssignment);
 
                 Players.add(newPlayer);
 
                 // print the results
-                System.out.format("%s, %s, %s, %s\n", id, name, lifeStatus, Assignment);
+                System.out.format("%s, %s, %s, %s\n", id, name, lifeStatus, firstAssignment);
 
 
             }
