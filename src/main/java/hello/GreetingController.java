@@ -89,6 +89,7 @@ public class GreetingController {
     public static ArrayList<Contact> playerInfo (){
         ArrayList<Contact> Players = new ArrayList<Contact>();
         Contact newPlayer = new Contact("noName", 0);
+
         Contact firstAssignment = new Contact("everyoneHasMe", 1);
         try {
             // create our mysql database connection
@@ -132,7 +133,9 @@ public class GreetingController {
                 Players.add(newPlayer);
 
                 // print the results
-              // System.out.format("%s, %s, %s, %s\n", id, name, lifeStatus, firstAssignment);
+               System.out.format("%s, %s, %s\n", newPlayer.getID(), newPlayer.getName(), newPlayer.getLifeStatus());
+
+               System.out.print(newPlayer.getName());
 
 
 
@@ -146,7 +149,7 @@ public class GreetingController {
             System.err.println(e.getMessage());
         }
 
-        return Players;
+       return Players;
 
 
     }
