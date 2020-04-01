@@ -1,7 +1,7 @@
 package hello;
 import java.util.ArrayList;
 
-public class Game {
+public class Game extends Players {
 
     public static ArrayList<Contact> masterListIN = new ArrayList<>();
     public static ArrayList<Contact> masterListOUT = new ArrayList<>();
