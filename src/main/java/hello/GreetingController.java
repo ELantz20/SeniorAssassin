@@ -22,6 +22,11 @@ public class GreetingController {
         model.addAttribute("name", name);
         return "greeting";
     }
+    @GetMapping("/login")
+    public String login(Model model) {
+        return "loginpage";
+    }
+
     @GetMapping("/homepage")
     public String homepage (Model model) {
         ArrayList<Contact> playerInfo = playerInfo();
