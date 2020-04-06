@@ -28,6 +28,7 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+    position: static;
 }
 
 button:hover {
@@ -62,6 +63,17 @@ button:hover {
 span.psw {
   float: right;
   padding-top: 16px;
+}
+
+.button {
+
+    color: red;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    position: bottom;
 }
 
 /* The Modal (background) */
@@ -134,9 +146,7 @@ span.psw {
 <body>
 
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="img/senior.png"  alt="senior assasin logo" style="width:600px;height:300px;"/></button>
-
-
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="img/senior.png"  alt="senior assassin logo" style="width:600px;height:300px;"/></button>
 
 <div id="id01" class="modal">
 
@@ -147,7 +157,7 @@ span.psw {
         </div>
 
         <div class="container">
-            <label for="uname"><b>Student ID</b></label>
+            <label for="id01"><b>Student ID</b></label>
             <input type="text" placeholder="Enter Student ID" name="uname" required>
 
             <!--<label for="psw"><b>Password</b></label>-->
@@ -168,23 +178,24 @@ span.psw {
         </div>
     </form>
 
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
 
-    <div id="id01" class="modal">
+    <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up</button>
+
+    <div id="id02" class="modal">
 
         <form class="modal-content animate" action="homepage.html" method="post">
             <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
 
             <div class="container">
-                <label for="uname"><b>First Name</b></label>
+                <label for="id02"><b>First Name</b></label>
                 <input type="text" placeholder="Enter First Name" name="uname" required>
 
-                <label for="uname"><b>Last Name</b></label>
+                <label for="id02"><b>Last Name</b></label>
                 <input type="text" placeholder="Enter Last Name" name="uname" required>
 
-                <label for="uname"><b>Student ID</b></label>
+                <label for="id02"><b>Student ID</b></label>
                 <input type="text" placeholder="Enter Student ID" name="uname" required>
 
                 <!--<label for="psw"><b>Password</b></label>-->
