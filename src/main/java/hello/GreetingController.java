@@ -71,17 +71,6 @@ public class GreetingController {
             }
 
 
-            /*try (Statement statement = connection.createStatement();
-                 ResultSet resultSet = statement.executeQuery(selectSql)) {
-
-                // Print results from select statement
-                System.out.println("Top 20 categories:");
-                while (resultSet.next()) {
-                    System.out.println(resultSet.getString(1) + " "
-                            + resultSet.getString(2));
-                }
-                connection.close();
-            }*/
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -137,7 +126,7 @@ public class GreetingController {
 
                System.out.print(newPlayer.getName());
 
-
+                 newPlayer = new Contact("noName", 0);
 
             }
             st.close();
@@ -154,5 +143,3 @@ public class GreetingController {
 
     }
 }
-
-
