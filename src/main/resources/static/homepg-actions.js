@@ -12,7 +12,7 @@ var students= ["Emily", "Carmen", "Elena", "Matilda", "Sasha", "Elise", "Sophia"
 function chooseName(){
     var nameNum= Math.floor(Math.random() * 9);
     var name= students[nameNum];
-    document.getElementByClassName("popuptext")= name;
+    name = document.getElementByClassName("popuptext");
 
 
 }
